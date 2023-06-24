@@ -1,0 +1,3 @@
+FROM     nginx:stable-alpine3.17-slim
+LABEL maintainer="liontechologies  <info@liontechacademy.com>"
+COPY   students.html   /usr/share/nginx/students.html
