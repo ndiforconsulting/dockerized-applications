@@ -18,8 +18,8 @@ ENV JAVA_HOME='/opt/java/openjdk' \
     SQ_TEMP_DIR="/opt/sonarqube/temp"
 
 RUN set -eux; \
-    groupadd --system --gid 1000 sonarqube; \
-    useradd --system --uid 1000 --gid sonarqube sonarqube; \
+    groupadd --system --gid 100 sonarqube; \
+    useradd --system --uid 100 --gid sonarqube sonarqube; \
     apt-get update; \
     apt-get install -y gnupg unzip curl bash fonts-dejavu; \
     echo "networkaddress.cache.ttl=5" >> "${JAVA_HOME}/conf/security/java.security"; \
